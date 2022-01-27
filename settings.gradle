@@ -8,3 +8,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ZeroConfig"
 include ':app'
+include(":api")
+include(":processor")
+include ':core'
