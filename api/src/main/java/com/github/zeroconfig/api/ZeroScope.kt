@@ -13,5 +13,5 @@ interface ZeroScope {
  */
 class DefaultScope : ZeroScope {
     override fun getScopeName(): String = "未指定"
-    override fun getOwners(): List<String> = listOf("liuhaixin.zero") //the god
+    override fun getOwners(): List<String> = listOf("zerofancy") //the god
 }

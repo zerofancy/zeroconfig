@@ -3,7 +3,7 @@ package org.bole.boleandroid.zeroconfig
 import kotlin.reflect.KProperty
 
 class ZeroConfigDelegate<T>(private val clazz: Class<T>, private val isMultipleProcess: Boolean = false) {
-    operator fun getValue(thisRef: Any?, property: KProperty<*>): T? =
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): T =
         ZeroConfigHelper.readConfig(clazz, isMultipleProcess)
 
     operator fun setValue(thisRef: Any?, property: KProperty<*>, value: T?) =
