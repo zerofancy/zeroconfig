@@ -17,17 +17,9 @@ import javax.tools.Diagnostic
 
 @AutoService(Processor::class)
 class ZeroConfigProcessor : AbstractProcessor() {
-
-    //元素相关的工具类
     private lateinit var elementUtils: Elements
-
-    //文件相关的工具类
     private lateinit var filer: Filer
-
-    //日志相关的工具类
     private lateinit var messager: Messager
-
-    //类型相关工具类
     private lateinit var typeUtils: Types
 
     private lateinit var classInfoMap: MutableMap<String, ZeroConfigInformation>
