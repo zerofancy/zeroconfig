@@ -2,6 +2,21 @@ plugins {
     id ("java-library")
     id ("kotlin")
     id ("kotlin-kapt")
+    id ("maven-publish")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.github.zeroconfig"
+                artifactId = "processor"
+                version = "1.0"
+
+                from(components["java"])
+            }
+        }
+    }
 }
 
 java {
